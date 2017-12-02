@@ -1,5 +1,5 @@
 body {
-  width: 30000px;
+  width: 19600px;
   font-family: 'Karla', sans-serif;
   overflow-y: hidden;
 }
@@ -143,6 +143,11 @@ body {
   width: 25px;
 }
 
+.end-line {
+  width: 40px;
+  border-top: 2px dashed black;
+}
+
 .section-statement, .section-img, .section iframe, .section h2 {
   border: 2px solid black;
 }
@@ -191,6 +196,9 @@ a h2 {
 
 @media
   (min-width: 1040px) and (max-width: 1200px) {
+    body {
+      width: 18600px;
+    }
     .section iframe, {
       width: 1000px;
       height: calc(1000px * .5625)
@@ -206,6 +214,9 @@ a h2 {
 
 @media
   (min-width: 800px) and (max-width: 1039px) {
+    body {
+      width: 15600px;
+    }
     .section iframe {
       width: 750px;
       height: calc(750px * .5625);
@@ -220,6 +231,9 @@ a h2 {
   }
 
 @media (min-width: 600px) and (max-width: 799px) {
+  body {
+    width: 13810px;
+  }
   .section iframe {
     width: 550px;
     height: calc(550px * .5625);
@@ -235,6 +249,9 @@ a h2 {
 
 @media
   (min-width: 400px) and (max-width: 599px) {
+    body {
+      width: 11840px;
+    }
     #loading-div {
       padding-top: 0;
     }
@@ -253,6 +270,9 @@ a h2 {
 
 @media
   (max-width: 399px) {
+    body {
+      width: 10580px;
+    }
     #loading-div {
       padding-top: 0;
     }
