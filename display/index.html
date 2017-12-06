@@ -16,9 +16,9 @@
   crossorigin="anonymous"></script>
 
   <!-- normalize -->
-  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="../css/normalize.css">
   <!-- custom styles -->
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="../css/style.css">
   <!-- google fonts -->
   <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
 
@@ -33,17 +33,16 @@
 <body>
 
   <!-- disable scrolling -->
-  <script>
+  <!-- <script>
     $('html, body').css({ 'overflow-x': 'hidden'})
-  </script>
+  </script> -->
 
   <!-- Loading div -->
-  <div id="loading-div" class="panel">
+  <!-- <div id="loading-div" class="panel">
     <div class="loading-container">
       <div class="loading-text">
-        <!-- <h1>The Right to Re-</h1> -->
         <div class="loading-title">
-          <img src="img/title-flat.jpg" alt="The Right to Re-">
+          <img src="../img/title-flat.jpg" alt="The Right to Re-">
         </div>
         <p>
           We do not accept the idea of a network walkout. For better or worse, everyone who carries a smartphone or takes a selfie has had their identity cloned and translated into machine-readable formats. And we continue to opt-in to the translation of our identities, despite the continual redefinition of privacy.
@@ -61,7 +60,7 @@
         <p id="enter-btn" class="statement-btn"><strong>ENTER</strong></p>
       </div>
     </div>
-  </div>
+  </div> -->
 
 <div id="main-content">
   <!--LAN-->
@@ -69,7 +68,7 @@
 
   <div class="panel">
     <div class="section">
-      <a href="http://marclee.io/en/tracenoizer-disinformation-on-demand/" class="a-img"><img class="section-img" src="img/lan-1.jpg" alt='LAN: "TraceNoizer"'></a>
+      <a href="http://marclee.io/en/tracenoizer-disinformation-on-demand/" class="a-img"><img class="section-img" src="../img/lan-1.jpg" alt='LAN: "TraceNoizer"'></a>
     </div>
   </div>
 
@@ -103,7 +102,7 @@
 
   <div class="panel">
     <div class="section">
-        <a href="https://jonaslund.biz/works/talk-to-me/" class="a-img"><img class="section-img" src="img/jonas_lund-1.jpg" alt='"Jonas Lund: Talk To Me"'></a>
+        <a href="https://jonaslund.biz/works/talk-to-me/" class="a-img"><img class="section-img" src="../img/jonas_lund-1.jpg" alt='"Jonas Lund: Talk To Me"'></a>
     </div>
   </div>
 
@@ -137,7 +136,7 @@
 
   <div class="panel">
     <div class="section">
-      <a href="https://paolocirio.net/work/obscurity/" class="a-img"><img class="section-img" src="img/paolo_cirio-1.jpg" alt="Paolo Cirio: Obscurity"></a>
+      <a href="https://paolocirio.net/work/obscurity/" class="a-img"><img class="section-img" src="../img/paolo_cirio-1.jpg" alt="Paolo Cirio: Obscurity"></a>
     </div>
   </div>
 
@@ -185,11 +184,11 @@
       <div class="flex-inner">
         <div class="flex-innermost" id="#target">
           <!-- <h1>The Right to Re-</h1> -->
-          <img class="start-img" src="img/title.jpg" alt="The Right to Re-">
+          <img class="start-img" src="../img/title.jpg" alt="The Right to Re-">
           <p id="home-btn" class="statement-btn">statement</p>
         </div>
         <div class="logos">
-          <img src="img/logos.jpg" alt="Presented by The Wrong Biennale and UCSC DANM">
+          <img src="../img/logos.jpg" alt="Presented by The Wrong Biennale and UCSC DANM">
         </div>
       </div>
     </div>
@@ -287,7 +286,7 @@
 
   <div class="panel">
     <div class="section">
-      <a href="http://www.danadalbo.com/#/selfless/" class="a-img"><img class="section-img" src="img/dana_dal_bo-1.jpg" alt="Dana Dal Bo: self-less"></a>
+      <a href="http://www.danadalbo.com/#/selfless/" class="a-img"><img class="section-img" src="../img/dana_dal_bo-1.jpg" alt="Dana Dal Bo: self-less"></a>
     </div>
   </div>
 
@@ -304,7 +303,7 @@
 
   <div class="panel">
     <div class="section">
-      <a href="http://xxxxxxxxxinliu.com/2016/10/can-you-tear-for-me/" class="a-img"><img class="section-img" src="img/xin_liu-1.jpg" alt='Xin Liu: Can you "tear" for me'></a>
+      <a href="http://xxxxxxxxxinliu.com/2016/10/can-you-tear-for-me/" class="a-img"><img class="section-img" src="../img/xin_liu-1.jpg" alt='Xin Liu: Can you "tear" for me'></a>
     </div>
   </div>
 
@@ -313,39 +312,52 @@
 
   <script type="text/javascript">
 
-  $(window).on('beforeunload', function() {
-    // $('#main-content').css({'visibility': 'hidden'})
-    $('#main-content').fadeTo(0, 0);
-    $(window).scrollLeft(0);
-  });
-
-  // $(window).on('load', function() {
-  $('#enter-btn').click(function() {
-    $('#loading-div').fadeTo('normal', 0, function(){
-          $('#loading-div').hide();
-          $('html, body').removeAttr('style'); //re-enable scrolling
-          // scroll to center
-          var homeOffset = $('.flex-innermost').offset().left;
-          var homeWidth = $('.flex-innermost').width();
-          var winWidth = $(window).width();
-          var scrollDist = homeOffset - ((winWidth-homeWidth)/2);
-          // $('html, body').animate({
-          //   scrollLeft: scrollDist
-          // }, 0);
-          $(window).scrollLeft(scrollDist);
-          $('#main-content').fadeTo('normal', 1); //fade in main-content
-      });
+    $(window).on('beforeunload', function() {
+      $('#main-content').fadeTo(0, 0);
     });
 
-    $("#home-btn").click(function() {
-      // $(".start-statement").toggle();
-      $('#main-content').fadeTo('normal', 0, function(){
-        $('#loading-div').show();
-        $(window).scrollLeft(0);
-        $('html, body').css({ 'overflow-x': 'hidden'});
-        $('#loading-div').fadeTo('normal', 1);
-      });
+    $(window).on('load', function() {
+      var homeOffset = $('.flex-innermost').offset().left;
+      var homeWidth = $('.flex-innermost').width();
+      var winWidth = $(window).width();
+      var scrollDist = homeOffset - ((winWidth-homeWidth)/2);
+      $(window).scrollLeft(scrollDist);
+      $('#main-content').fadeTo('normal', 1); //fade in main-content
     });
+
+  // $(window).on('beforeunload', function() {
+  //   // $('#main-content').css({'visibility': 'hidden'})
+  //   $('#main-content').fadeTo(0, 0);
+  //   $(window).scrollLeft(0);
+  // });
+  //
+  // // $(window).on('load', function() {
+  // $('#enter-btn').click(function() {
+  //   $('#loading-div').fadeTo('normal', 0, function(){
+  //         $('#loading-div').hide();
+  //         $('html, body').removeAttr('style'); //re-enable scrolling
+  //         // scroll to center
+  //         var homeOffset = $('.flex-innermost').offset().left;
+  //         var homeWidth = $('.flex-innermost').width();
+  //         var winWidth = $(window).width();
+  //         var scrollDist = homeOffset - ((winWidth-homeWidth)/2);
+  //         // $('html, body').animate({
+  //         //   scrollLeft: scrollDist
+  //         // }, 0);
+  //         $(window).scrollLeft(scrollDist);
+  //         $('#main-content').fadeTo('normal', 1); //fade in main-content
+  //     });
+  //   });
+  //
+  //   $("#home-btn").click(function() {
+  //     // $(".start-statement").toggle();
+  //     $('#main-content').fadeTo('normal', 0, function(){
+  //       $('#loading-div').show();
+  //       $(window).scrollLeft(0);
+  //       $('html, body').css({ 'overflow-x': 'hidden'});
+  //       $('#loading-div').fadeTo('normal', 1);
+  //     });
+  //   });
 
   </script>
 
